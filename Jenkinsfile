@@ -139,7 +139,7 @@ pipeline {
                 allOf {
                     expression { env.MODEL_CHANGED == 'true' }
                     expression { !params.SKIP_DEPLOY }
-                    branch 'main'
+                    expression { env.GIT_BRANCH == 'main' || env.GIT_BRANCH == 'origin/main' }
                 }
             }
             steps {
@@ -174,7 +174,7 @@ pipeline {
                 allOf {
                     expression { env.MODEL_CHANGED == 'true' }
                     expression { !params.SKIP_DEPLOY }
-                    branch 'main'
+                    expression { env.GIT_BRANCH == 'main' || env.GIT_BRANCH == 'origin/main' }
                 }
             }
             steps {
