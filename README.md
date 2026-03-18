@@ -16,7 +16,7 @@
 
 ## Overview
 
-This repository demonstrates how to integrate **Palo Alto Networks Prisma AIRS Model Security** scanning into a CI/CD pipeline using **Jenkins**. When a model configuration changes, the pipeline automatically scans the model against AIRS security policies and **only deploys to Google Cloud Vertex AI if the model passes the security assessment**.
+This repository demonstrates how to integrate **Palo Alto Networks Prisma AIRS Model Security** scanning into a CI/CD pipeline using **Jenkins**. When an AI model changes in the configuration in this example, the pipeline automatically scans the model against AIRS security policies and **only deploys to Google Cloud Vertex AI if the model passes the security assessment**. Vertex AI is used here as an example deployment target — the security scanning pattern can be adapted to any infrastructure (e.g., AWS SageMaker, Azure ML, on-prem).
 
 > **Note:** This example is scoped to **HuggingFace models deployed as self-hosted endpoints on Vertex AI**.
 
